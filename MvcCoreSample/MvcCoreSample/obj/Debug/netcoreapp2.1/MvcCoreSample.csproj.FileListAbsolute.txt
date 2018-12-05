@@ -62,3 +62,5 @@ D:\Github\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\MvcCoreSample.View
 D:\Github\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\MvcCoreSample.dll
 D:\Github\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\MvcCoreSample.pdb
 D:\Github\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\MvcCoreSample.csproj.CopyComplete
+C:\Users\alitan\Desktop\MvcCoreSample\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
+C:\Users\alitan\Desktop\MvcCoreSample\MvcCoreSample\MvcCoreSample\obj\Debug\netcoreapp2.1\Razor\Views\Product\Create.g.cshtml.cs
