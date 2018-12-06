@@ -14,12 +14,14 @@ namespace MvcCoreSample.Models
         public string Name { get; set; }
 
         [DisplayName("Resim")]
-        public string ImagePath { get; set; }
+        public string Image { get; set; }
 
         [DisplayName("Stok Miktarı")]
         public double Stock { get; set; }
 
         [DisplayName("Fiyat")]
         public decimal Price { get; set; }
+
+        public int BrandId { get; set; }
     }
 }

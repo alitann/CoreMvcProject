@@ -1,0 +1,26 @@
+﻿***************************************************************************************CONNECTIONSTRING**********************************************************************************
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MvcDb;Trusted_Connection=True;"
+  }
+
+
+***************************************************************************************MVCSAMPLEDB***************************************************************************************
+CREATE TABLE [dbo].[Products] (
+    [Id]      INT             IDENTITY (1, 1) NOT NULL,
+    [Name]    NVARCHAR (MAX)  NULL,
+    [Price]   DECIMAL (18, 2) NOT NULL,
+    [Stock]   FLOAT (53)      NOT NULL,
+    [Image]   NVARCHAR (MAX)  NULL,
+    [BrandId] INT             NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Products_Brands_BrandId] FOREIGN KEY ([BrandId]) REFERENCES [dbo].[Brands] ([BrandId]) ON DELETE CASCADE
+);
+
+
+***************************************************************************************MVCDBCONTEXT CTOR***********************************************************************************
+        public MvcSampleDbContext(DbContextOptions<MvcSampleDbContext> options)
+            : base(options)
+        { }
+
+***************************************************************************************MVCDBCONTEXT STARTUP***************************************************************************************
+services.AddDbContext<MvcSampleDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

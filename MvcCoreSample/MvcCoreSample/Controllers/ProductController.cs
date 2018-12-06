@@ -61,9 +61,10 @@ namespace MvcCoreSample.Controllers
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     model.FormFile.CopyToAsync(stream);
-                    model.Product.ImagePath = model.FormFile.FileName;
+                    model.Product.Image = model.FormFile.FileName;
                 }
             }
+            model.Product.BrandId = Convert.ToInt32(model.BrandId);
             _productRepository.Add(model.Product);
             return RedirectToAction("Index");
         }

@@ -1,0 +1,17 @@
+﻿@model MvcCoreSample.Models.Product
+
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="~/images/@Model.Image" alt="Card image cap" height="200" width="200">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Name</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model.Price TL</li>
+            <li class="list-group-item">@Model.Stock Adet</li>
+        </ul>
+        @*<div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>*@
+    </div>
